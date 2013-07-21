@@ -3,6 +3,8 @@
 is a Vim plugin for Ino command-line toolkit. That allows you to build/clean
 a Ino project and upload firmware to your Arduino directly from Vim.
 
+> Current version is for Mac OS X only 
+
 ## Installation
 
 Prerequisity (not necessary if you want to configure everything by hand) is a
@@ -50,10 +52,12 @@ let vimino_serial_screen_prefered = 1
 
 ## Requirements
 
-You must have the [Arduino][arduino] IDE and Ino command-line toolkit installed.
+You must have the [Arduino][arduino] IDE and [Ino][ino] command-line toolkit installed.
 
 [arduino]: http://arduino.cc/en/Main/Software
 [ino]: http://inotool.org/
 
 ### optional
+Install a [Picocom][picocom] terminal emaultion program, which is primarily used by [Ino][ino]
+
 [picocom]: http://code.google.com/p/picocom/

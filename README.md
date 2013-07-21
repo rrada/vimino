@@ -1,4 +1,59 @@
-vimino
-======
+# Vimino
 
-Vim plugin for Ino command-line toolkit
+is a Vim plugin for Ino command-line toolkit. That allows you to build/clean
+a Ino project and upload firmware to your Arduino directly from Vim.
+
+## Installation
+
+Prerequisity (not necessary if you want to configure everything by hand) is a
+`Pathogen` plugin fo Vim. If you have one, everything you need to install
+the plugin is:
+
+```
+cd ~/.vim/bundle
+git clone https://github.com/rrada/vimino.git
+```
+
+and start using it.
+
+## Usage
+
+You must have to open a sketch in the current buffer. If no one is opened,
+warn message is passed.
+
+```
+<Leader> command is by default a '\' key
+```
+
+`<Leader>ic` - Clean previously builded directory.
+
+`<Leader>ib` - Build a firmware from the current project.
+
+`<Leader>iu` - Upload firmware to your Arduino
+
+`<Leader>is` - Open a serial port in `picocom`(default, see plugin configuration) or `screen`.
+
+
+## Plugin Configuration
+There are some configuration options to change a behavior of the plugin.
+All of them goes to `~/.vimrc` of global `/etc/vim/vimrc` files.
+
+The default key mapping can be turned off by this:
+```
+let g:vimino_map_keys = 0
+```
+
+If you want to use a `screen` instead of a `picocom`, which is default:
+```
+let vimino_serial_screen_prefered = 1
+```
+
+## Requirements
+
+You must have the [Arduino][arduino] IDE and Ino command-line toolkit installed.
+
+[arduino]: http://arduino.cc/en/Main/Software
+[ino]: http://inotool.org/
+
+### optional
+[picocom]: http://code.google.com/p/picocom/

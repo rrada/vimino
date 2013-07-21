@@ -1,0 +1,22 @@
+#!/bin/sh
+
+#/ Usage: ino-cli <project_dir> <action>
+#/ Invokes the Ino command-line toolkit
+#/ action can be: clean, build, upload and serial
+
+# usage
+[ $# -eq 0 ] && {
+  grep '^#/'< "$0" | cut -c4-
+  exit 2
+}
+CMD=`which ino`
+PROJECT_DIR=$1
+ACTION=$2
+
+[ -z ${CMD} ] && {
+  echo "Is Ino installed?"
+  exit 1
+}
+
+cd "${PROJECT_DIR}"
+${CMD} ${ACTION}

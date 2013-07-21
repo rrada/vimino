@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# choose a serial port
+if [ -f $1/ino.ini ]; then
+  port=`grep serial-port $1/ino.ini | cut -d"=" -f2`
+  echo "Using serial-port settings from ino.ini of the project"
+elif [ -f /etc/ino.ini ]; then
+  port=`grep serial-port /etc/ino.ini | cut -d"=" -f2`
+  echo "Using serial-port settings from global /etc/ino.ini"
+else
+  port=`ls /dev/tty.* | grep usb`
+  echo "Using automagic serial-port settings"
+fi
+
+echo " \__use <Ctrl-a><k> to exit the screen utility"
+
+# osascript -e 'tell application "Terminal" to do script "screen '.$port'"'
+osascript -e \
+  "tell application \"iTerm\"
+    activate
+    set myterm to (make new terminal)
+    tell myterm
+      launch session \"vimino serial\"
+      set _session to current session
+      tell _session
+        write text \"screen $port\"
+      end tell
+    end tell
+   end tell"

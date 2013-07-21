@@ -1,9 +1,9 @@
 # Vimino
 
 is a Vim plugin for Ino command-line toolkit. That allows you to build/clean
-a Ino project and upload firmware to your Arduino directly from Vim.
+a [Ino][ino] project([see quickstart](http://inotool.org/quickstart)) and upload firmware to your Arduino directly from Vim.
 
-> Current version is for Mac OS X only 
+> Current version is for Mac OS X only, Linux version will be soon as possible. 
 
 ## Installation
 
@@ -57,7 +57,7 @@ You must have the [Arduino][arduino] IDE and [Ino][ino] command-line toolkit ins
 [arduino]: http://arduino.cc/en/Main/Software
 [ino]: http://inotool.org/
 
-### optional
-Install a [Picocom][picocom] terminal emaultion program, which is primarily used by [Ino][ino]
+### Optional
+Install a [Picocom][picocom] terminal emulation program, which is primarily used by [Ino][ino]
 
 [picocom]: http://code.google.com/p/picocom/

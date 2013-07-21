@@ -21,7 +21,7 @@ and start using it.
 ## Usage
 
 You must have to open a sketch in the current buffer. If no one is opened,
-warn message is passed.
+warn message is displayed.
 
 ```
 <Leader> command is by default a '\' key
@@ -38,11 +38,11 @@ warn message is passed.
 
 ## Plugin Configuration
 There are some configuration options to change a behavior of the plugin.
-All of them goes to `~/.vimrc` of global `/etc/vim/vimrc` files.
+All of them goes to `~/.vimrc` or global `/etc/vim/vimrc` file.
 
 The default key mapping can be turned off by this:
 ```
-let g:vimino_map_keys = 0
+let vimino_map_keys = 0
 ```
 
 If you want to use a `screen` instead of a `picocom`, which is default:

@@ -36,7 +36,7 @@ warn message is displayed.
 `<Leader>is` - Open a serial port in `picocom`(default, see plugin configuration) or `screen`.
 
 
-##<a id="plugin-configuration"></a> Plugin Configuration
+## Plugin Configuration
 There are some configuration options to change a behavior of the plugin.
 All of them goes to `~/.vimrc` or global `/etc/vim/vimrc` file.
 

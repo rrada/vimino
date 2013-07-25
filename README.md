@@ -3,7 +3,7 @@
 is a Vim plugin for Ino command-line toolkit. That allows you to build/clean
 a [Ino][ino] project([see quickstart](http://inotool.org/quickstart)) and upload firmware to your Arduino directly from Vim.
 
-> Current version is for Mac OS X only, Linux version will be soon as possible. 
+> Current version is for Mac OS X only when the `screen` is used instead of default `picocom` (see [plugin configuration](#plugin-configuration)). 
 
 ## Installation
 
@@ -36,7 +36,7 @@ warn message is displayed.
 `<Leader>is` - Open a serial port in `picocom`(default, see plugin configuration) or `screen`.
 
 
-## Plugin Configuration
+##<a id="plugin-configuration"></a> Plugin Configuration
 There are some configuration options to change a behavior of the plugin.
 All of them goes to `~/.vimrc` or global `/etc/vim/vimrc` file.
 
